@@ -39,7 +39,7 @@ CREATE TABLE `administrador` (
 
 INSERT INTO `administrador` (`id`, `Nombre`, `Clave`) VALUES
 (1, 'admin', '21232f297a57a5a743894a0e4a801fc3'),
-(2, 'pepito', '25d55ad283aa400af464c76d713c07ad');
+(2, 'perez', '25d55ad283aa400af464c76d713c07ad');
 
 -- --------------------------------------------------------
 
