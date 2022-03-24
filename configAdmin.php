@@ -29,6 +29,11 @@
               </a>
             </li>
             <li>
+              <a href="configAdmin.php?view=customerlist">
+                <i class="fa fa-truck" aria-hidden="true"></i> &nbsp; Clientes
+              </a>
+            </li>
+            <li>
               <a href="configAdmin.php?view=category">
                 <i class="fa fa-shopping-basket" aria-hidden="true"></i> &nbsp; Categorías
               </a>
@@ -56,7 +61,7 @@
           </ul>
           <?php
             $content=$_GET['view'];
-            $WhiteList=["product","productlist","productinfo","provider","providerlist","providerinfo","category","categorylist","categoryinfo","admin","adminlist","order","bank","account"];
+            $WhiteList=["product","productlist","productinfo","provider","providerlist","providerinfo","customerlist","category","categorylist","categoryinfo","admin","adminlist","order","bank","account"];
             if(isset($content)){
               if(in_array($content, $WhiteList) && is_file("./admin/".$content."-view.php")){
                 include "./admin/".$content."-view.php";
