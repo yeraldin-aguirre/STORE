@@ -27,7 +27,7 @@ if (mysqli_num_rows($cons) <= 0) {
 						location.reload();
 					}
 				});
-		</script>';
+			</script>';
 	} else {
 		echo '<script>swal("ERROR", "Ocurrió un error inesperado, por favor intente nuevamente", "error");</script>';
 	}

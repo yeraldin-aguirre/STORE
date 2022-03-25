@@ -19,22 +19,22 @@ if (mysqli_num_rows($verificar) <= 0) {
 	if (consultasSQL::InsertSQL("administrador", "Nombre, Clave", "'$nameAdmin','$passAdminFinal'")) {
 		echo '<script>
 				swal({
-				title: "Administrador registrado",
-				text: "El administrador se registró con éxito",
-				type: "success",
-				showCancelButton: true,
-				confirmButtonClass: "btn-danger",
-				confirmButtonText: "Aceptar",
-				cancelButtonText: "Cancelar",
-				closeOnConfirm: false,
-				closeOnCancel: false
+					title: "Administrador registrado",
+					text: "El administrador se registró con éxito",
+					type: "success",
+					showCancelButton: true,
+					confirmButtonClass: "btn-danger",
+					confirmButtonText: "Aceptar",
+					cancelButtonText: "Cancelar",
+					closeOnConfirm: false,
+					closeOnCancel: false
 				},
 				function(isConfirm) {
-				if (isConfirm) {
-					location.reload();
-				} else {
-					location.reload();
-				}
+					if (isConfirm) {
+						location.reload();
+					} else {
+						location.reload();
+					}
 				});
 			</script>';
 	} else {

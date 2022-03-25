@@ -17,24 +17,24 @@ if (mysqli_num_rows($checP) <= 0) {
 			unlink($directorio);
 		}
 		echo '<script>
-					swal({
-						title: "Producto eliminado",
-						text: "El producto se eliminó con éxito de la tienda",
-						type: "success",
-						showCancelButton: true,
-						confirmButtonClass: "btn-danger",
-						confirmButtonText: "Aceptar",
-						cancelButtonText: "Cancelar",
-						closeOnConfirm: false,
-						closeOnCancel: false
-					},
-					function(isConfirm) {
-						if (isConfirm) {
-							location.reload();
-						} else {
-							location.reload();
-						}
-					});
+				swal({
+					title: "Producto eliminado",
+					text: "El producto se eliminó con éxito de la tienda",
+					type: "success",
+					showCancelButton: true,
+					confirmButtonClass: "btn-danger",
+					confirmButtonText: "Aceptar",
+					cancelButtonText: "Cancelar",
+					closeOnConfirm: false,
+					closeOnCancel: false
+				},
+				function(isConfirm) {
+					if (isConfirm) {
+						location.reload();
+					} else {
+						location.reload();
+					}
+				});
 			</script>';
 	} else {
 		echo '<script>swal("ERROR", "Ocurrió un error inesperado, por favor intente nuevamente", "error");</script>';

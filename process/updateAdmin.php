@@ -53,7 +53,7 @@ if (consultasSQL::UpdateSQL("administrador", $campos, "id='$code'")) {
                     location.reload();
                 }
             });
-    </script>';
+        </script>';
     $_SESSION['nombreAdmin'] = $finalname;
 } else {
     echo '<script>swal("ERROR", "Ocurrió un error inesperado, por favor intente nuevamente", "error");</script>';

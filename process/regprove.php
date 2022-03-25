@@ -14,22 +14,22 @@ if (mysqli_num_rows($verificar) <= 0) {
 	if (consultasSQL::InsertSQL("proveedor", "NITProveedor, NombreProveedor, Direccion, Telefono, PaginaWeb", "'$nitProve','$nameProve','$dirProve','$telProve','$webProve'")) {
 		echo '<script>
 				swal({
-				title: "Proveedor registrado",
-				text: "Los datos del proveedor se agregaron con éxito",
-				type: "success",
-				showCancelButton: true,
-				confirmButtonClass: "btn-danger",
-				confirmButtonText: "Aceptar",
-				cancelButtonText: "Cancelar",
-				closeOnConfirm: false,
-				closeOnCancel: false
+					title: "Proveedor registrado",
+					text: "Los datos del proveedor se agregaron con éxito",
+					type: "success",
+					showCancelButton: true,
+					confirmButtonClass: "btn-danger",
+					confirmButtonText: "Aceptar",
+					cancelButtonText: "Cancelar",
+					closeOnConfirm: false,
+					closeOnCancel: false
 				},
 				function(isConfirm) {
-				if (isConfirm) {
-					location.reload();
-				} else {
-					location.reload();
-				}
+					if (isConfirm) {
+						location.reload();
+					} else {
+						location.reload();
+					}
 				});
 			</script>';
 	} else {

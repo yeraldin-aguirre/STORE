@@ -11,36 +11,36 @@ if (empty($_SESSION['carro'][$codigo])) {
         'cantidad' => $cantidad
     );
     echo '<script>
-        swal({
-            title: "Producto agregado",
-            text: "Quieres ver el carrito de compras?",
-            type: "info",
-            showCancelButton: true,
-            confirmButtonClass: "btn-success",
-            cancelButtonClass: "btn-primary",
-            confirmButtonText: "Si, ir al carrito",
-            cancelButtonText: "No, seguir comprando",
-            closeOnConfirm: false
-        },
-        function(){
-            window.location="carrito.php";
-        });
-    </script>';
+            swal({
+                title: "Producto agregado",
+                text: "Quieres ver el carrito de compras?",
+                type: "info",
+                showCancelButton: true,
+                confirmButtonClass: "btn-success",
+                cancelButtonClass: "btn-primary",
+                confirmButtonText: "Si, ir al carrito",
+                cancelButtonText: "No, seguir comprando",
+                closeOnConfirm: false
+            },
+            function(){
+                window.location="carrito.php";
+            });
+        </script>';
 } else {
     echo '<script>
-        swal({
-            title: "ERROR",
-            text: "El producto ya fue agregado al carrito. Quieres ver el carrito de compras?",
-            type: "error",
-            showCancelButton: true,
-            confirmButtonClass: "btn-success",
-            cancelButtonClass: "btn-primary",
-            confirmButtonText: "Si, ver el carrito",
-            cancelButtonText: "No, seguir comprando",
-            closeOnConfirm: false
-        },
-        function(){
-            window.location="carrito.php";
-        });
-    </script>';
+            swal({
+                title: "ERROR",
+                text: "El producto ya fue agregado al carrito. Quieres ver el carrito de compras?",
+                type: "error",
+                showCancelButton: true,
+                confirmButtonClass: "btn-success",
+                cancelButtonClass: "btn-primary",
+                confirmButtonText: "Si, ver el carrito",
+                cancelButtonText: "No, seguir comprando",
+                closeOnConfirm: false
+            },
+            function(){
+                window.location="carrito.php";
+            });
+        </script>';
 }
