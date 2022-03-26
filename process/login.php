@@ -15,6 +15,7 @@ if ($documento != "" && $clave != "") {
             $_SESSION['documentoAdmin'] = $documento;
             $_SESSION['claveAdmin'] = $clave;
             $_SESSION['UserType'] = "Admin";
+            // $_SESSION['RolId'] = 2;
             $_SESSION['adminID'] = $filaU['usu_di'];
             echo '<script> location.href="index.php"; </script>';
         } else {
@@ -29,6 +30,7 @@ if ($documento != "" && $clave != "") {
             $_SESSION['documentoUser'] = $documento;
             $_SESSION['claveUser'] = $clave;
             $_SESSION['UserType'] = "User";
+            // $_SESSION['RolId'] = 3;
             $_SESSION['UserNIT'] = $filaU['usu_di'];
             echo '<script> location.href="index.php"; </script>';
         } else {

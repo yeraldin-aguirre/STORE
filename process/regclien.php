@@ -17,7 +17,7 @@ if (!$idUsuario == "") {
 		$verificar = ejecutarSQL::consultar("SELECT * FROM usuario WHERE usu_di='" . $idUsuario . "'");
 		$verificaltotal = mysqli_num_rows($verificar);
 		if ($verificaltotal <= 0) {
-			if (consultasSQL::InsertSQL("usuario", "usu_di, usu-pass, usu_estado, ", "'$idUsuario','$passUsuario'")) {
+			if (consultasSQL::InsertSQL("usuario", "usu_di, usu-pass, usu_estado, usu_rol_id", "'$idUsuario','$passUsuario'","Activo", 3)) {
 				echo '<script>
 						swal({
 							title: "Registro completado",
