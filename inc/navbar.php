@@ -30,7 +30,7 @@
               <div class="contenedor-tabla pull-right">
                 <div class="contenedor-tr">
                   <a href="index.php" class="table-cell-td">Inicio</a>
-                  <a href="product.php" class="table-cell-td">Catalogo</a>
+                  <a href="product.php" class="table-cell-td">Catálogo </a>
                   <?php
                       if(!$_SESSION['nombreAdmin']==""){
                           echo ' 
@@ -55,9 +55,9 @@
                       }else{
                           echo ' 
 
-                          <a href="registration.php" class="table-cell-td">Registro</a>
+                          <a href="registration.php" class="table-cell-td">Registrarse</a>
                               <a href="#" class="table-cell-td" data-toggle="modal" data-target=".modal-login">
-                                  <i class="fa fa-user"></i>&nbsp;&nbsp;Login
+                                  <i class="fa fa-user"></i>&nbsp;&nbsp;Iniciar Sesión
                               </a>
                            ';
                       }
