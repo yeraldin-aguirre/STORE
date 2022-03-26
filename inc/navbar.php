@@ -2,10 +2,30 @@
     session_start(); 
     error_reporting(E_PARSE);
 ?>
+
+<header>
+    <!-- <link rel="stylesheet" type="text/css" href="Assets/css/header.css" /> -->
+
+    <!------------------------------------ LOGO IZQUIERDA SUPERIOR----------------------------------------------->
+    <div id="cont_logo">
+      <img id="logo" src="assets/img/Favicom.png" alt="" />
+      <!-- <img id="logo" src="Resources/img/Screenshot_8.png" alt=""> -->
+    </div>
+
+    <!-------------------------------------- BANNER SUPERIOR------------------------------------------------------->
+
+    <div class="img_promo">
+      <img class="img_logo" id="banner" src="assets/img/BannerMV.png" alt="" />
+    </div>
+
+    </div>
+
+  </header>
+
 <nav id="navbar-auto-hidden">
         <div class="row hidden-xs">
             <div class="col-xs-4">
-                <p class="text-navbar tittles-pages-logo">STORE</p>
+                <p class="text-navbar tittles-pages-logo">MAX-VITRINAS</p>
             </div>
             <div class="col-xs-8">
               <div class="contenedor-tabla pull-right">
