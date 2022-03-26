@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Inicio</title>
+    <title>MAX-VITRINAS</title>
     <?php include './inc/link.php'; ?>
 </head>
 
