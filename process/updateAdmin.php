@@ -54,7 +54,7 @@ if (consultasSQL::UpdateSQL("administrador", $campos, "id='$code'")) {
                 }
             });
         </script>';
-    $_SESSION['nombreAdmin'] = $finalname;
+    $_SESSION['documentoAdmin'] = $finalname;
 } else {
     echo '<script>swal("ERROR", "Ocurrió un error inesperado, por favor intente nuevamente", "error");</script>';
 }

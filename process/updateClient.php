@@ -46,7 +46,7 @@ if ($oldPass != "" && $newPass != "" && $newPass2 != "") {
 }
 
 if (consultasSQL::UpdateSQL("cliente", $campos, "NIT='$NIT'")) {
-	$_SESSION['nombreUser'] = $user;
+	$_SESSION['documentoUser'] = $user;
 	echo '<script>
 			swal({
 				title: "Datos actualizados",

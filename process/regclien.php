@@ -2,22 +2,22 @@
 include '../library/configServer.php';
 include '../library/consulSQL.php';
 
-$nitCliente = consultasSQL::clean_string($_POST['clien-nit']);
-$nameCliente = consultasSQL::clean_string($_POST['clien-name']);
-$fullnameCliente = consultasSQL::clean_string($_POST['clien-fullname']);
-$apeCliente = consultasSQL::clean_string($_POST['clien-lastname']);
-$passCliente = consultasSQL::clean_string(md5($_POST['clien-pass']));
-$passCliente2 = consultasSQL::clean_string(md5($_POST['clien-pass2']));
-$dirCliente = consultasSQL::clean_string($_POST['clien-dir']);
-$phoneCliente = consultasSQL::clean_string($_POST['clien-phone']);
-$emailCliente = consultasSQL::clean_string($_POST['clien-email']);
+$idUsuario = consultasSQL::clean_string($_POST['usu_di']);
+// $nameCliente = consultasSQL::clean_string($_POST['clie-nomb']);
+// $fullnameCliente = consultasSQL::clean_string($_POST['clien-fullname']);
+// $apeCliente = consultasSQL::clean_string($_POST['clie-apel']);
+$passUsuario = consultasSQL::clean_string(md5($_POST['usu-pass']));
+$passUsuario2 = consultasSQL::clean_string(md5($_POST['usu-pass2']));
+// $dirCliente = consultasSQL::clean_string($_POST['clien-dir']);
+// $phoneCliente = consultasSQL::clean_string($_POST['clien-phone']);
+// $emailUsuario = consultasSQL::clean_string($_POST['usu-email']);
 
-if (!$nitCliente == "" && !$nameCliente == "" && !$apeCliente == "" && !$dirCliente == "" && !$phoneCliente == "" && !$emailCliente == "" && !$fullnameCliente == "") {
-	if ($passCliente == $passCliente2) {
-		$verificar = ejecutarSQL::consultar("SELECT * FROM cliente WHERE NIT='" . $nitCliente . "'");
+if (!$idUsuario == "") {
+	if ($passUsuario == $passUsuario2) {
+		$verificar = ejecutarSQL::consultar("SELECT * FROM usuario WHERE usu_di='" . $idUsuario . "'");
 		$verificaltotal = mysqli_num_rows($verificar);
 		if ($verificaltotal <= 0) {
-			if (consultasSQL::InsertSQL("cliente", "NIT, Nombre, NombreCompleto, Apellido, Direccion, Clave, Telefono, Email", "'$nitCliente','$nameCliente','$fullnameCliente','$apeCliente','$dirCliente', '$passCliente','$phoneCliente','$emailCliente'")) {
+			if (consultasSQL::InsertSQL("usuario", "usu_di, usu-pass, usu_estado, ", "'$idUsuario','$passUsuario'")) {
 				echo '<script>
 						swal({
 							title: "Registro completado",
@@ -42,7 +42,7 @@ if (!$nitCliente == "" && !$nameCliente == "" && !$apeCliente == "" && !$dirClie
 				echo '<script>swal("ERROR", "Ocurrió un error inesperado, por favor intente nuevamente", "error");</script>';
 			}
 		} else {
-			echo '<script>swal("ERROR", "El DNI que ha ingresado ya está registrado en el sistema, por favor ingrese otro número de DNI", "error");</script>';
+			echo '<script>swal("ERROR", "El correo que ha ingresado ya está registrado en el sistema, por favor ingrese otro número de correo", "error");</script>';
 		}
 		mysqli_free_result($verificar);
 	} else {
