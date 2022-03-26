@@ -31,13 +31,64 @@ body{
     background-size: cover;
     background-color: #fff;
 }
+/* ----------------------ESTILOS HEADER------------------------------------------------ */
+header {
+    position: relative;
+    width: 100%;
+    height: 163px;
+    background: rgb(255, 255, 255);
+  }
+  
+  #cont_logo {
+    position: absolute;
+    height: 163px;
+    width: 163px;
+    top: 0px;
+    /* left: 10px; */
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    border-top-left-radius: 0;
+    z-index: 1;
+    border-style: solid;
+    border-width: 8px;
+    border-color: rgb(247, 79, 13);
+  }
+  #logo {
+    height: 103px;
+    width: 90px;
+    top: 17px;
+    left: 23px;
+    position: absolute;
+  }
+  
+  .img_promo {
+    position: absolute;
+    height: 163px;
+    width: 100%;
+    /* left: 10px; */
+    border-bottom-left-radius: 81px;
+    top: 0px;
+    /* background-color: rgb(85, 85, 85); */
+    border-style: solid;
+    border-width: 8px;
+    border-color: #f74f0d;
+  }
+  
+  #banner {
+    position: relative;
+    left: 130px;
+    height: 147px;
+  }
+  /* ----------------------ESTILOS NAV-------------------- */
 nav{
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
     top: 0px;
-    background-color: #120346;
+    background-color: rgb(29 136 182);
     box-shadow: 2px 0px 7px #000;
-	z-index: 50;
+    z-index: 50;
+
+    
 }
 .contenedor-tabla{
     display: table;
