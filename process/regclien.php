@@ -12,13 +12,15 @@ $passUsuario2 = consultasSQL::clean_string(md5($_POST['usu-pass2']));
 // $phoneCliente = consultasSQL::clean_string($_POST['clien-phone']);
 // $emailUsuario = consultasSQL::clean_string($_POST['usu-email']);
 
+
 if (!$idUsuario == "") {
 	if ($passUsuario == $passUsuario2) {
 		$verificar = ejecutarSQL::consultar("SELECT * FROM usuario WHERE usu_di='" . $idUsuario . "'");
 		$verificaltotal = mysqli_num_rows($verificar);
 		if ($verificaltotal <= 0) {
-			if (consultasSQL::InsertSQL("usuario", "usu_di, usu-pass, usu_estado, usu_rol_id", "'$idUsuario','$passUsuario'","Activo", 3)) {
-				echo '<script>
+			if (consultasSQL::InsertSQL("usuario", "usu_di, usu_pass, usu_estado, usu_rol_id", "'$idUsuario','$passUsuario','Activo',3")) {
+				echo
+				'<script>
 						swal({
 							title: "Registro completado",
 							text: "El registro se completó con éxito, ya puedes iniciar sesión en el sistema",
@@ -32,7 +34,7 @@ if (!$idUsuario == "") {
 						},
 						function(isConfirm) {
 							if (isConfirm) {
-								location.reload();
+								location.href="index.php";
 							} else {
 								location.reload();
 							}
