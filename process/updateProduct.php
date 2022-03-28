@@ -6,8 +6,8 @@ $codeOldProdUp = consultasSQL::clean_string($_POST['code-old-prod']);
 $nameProdUp = consultasSQL::clean_string($_POST['prod-name']);
 $catProdUp = consultasSQL::clean_string($_POST['prod-categoria']);
 $priceProdUp = consultasSQL::clean_string($_POST['prod-price']);
-$modelProdUp = consultasSQL::clean_string($_POST['prod-model']);
-$marcaProdUp = consultasSQL::clean_string($_POST['prod-marca']);
+$dimeProdUp = consultasSQL::clean_string($_POST['prod-dime']);
+$estruProdUp = consultasSQL::clean_string($_POST['prod-estru']);
 $stockProdUp = consultasSQL::clean_string($_POST['prod-stock']);
 $proveProdUp = consultasSQL::clean_string($_POST['prod-codigoP']);
 $EstadoProdUp = consultasSQL::clean_string($_POST['prod-estado']);
@@ -45,7 +45,7 @@ if ($imgName != "") {
 	}
 }
 
-if (consultasSQL::UpdateSQL("producto", "NombreProd='$nameProdUp',CodigoCat='$catProdUp',Precio='$priceProdUp',Descuento='$descProdUp',Modelo='$modelProdUp',Marca='$marcaProdUp',Stock='$stockProdUp',NITProveedor='$proveProdUp',Estado='$EstadoProdUp'", "CodigoProd='$codeOldProdUp'")) {
+if (consultasSQL::UpdateSQL("producto", "NombreProd='$nameProdUp',CodigoCat='$catProdUp',Precio='$priceProdUp',Descuento='$descProdUp',Dimension='$dimeProdUp',Estructura='$estruProdUp',Stock='$stockProdUp',NITProveedor='$proveProdUp',Estado='$EstadoProdUp'", "CodigoProd='$codeOldProdUp'")) {
 	echo '<script>
 			swal({
 				title: "Producto actualizado",

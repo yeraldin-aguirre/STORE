@@ -95,7 +95,9 @@
             </div>
         </div>
     </nav>
-   
+
+    <!-- AQUÍ EMPIEZA EL MODAL DEL LOGIN -->
+
     <div class="modal fade modal-login" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-sm">
           <div class="modal-content" id="modal-form-login" style="padding: 15px;">
@@ -108,8 +110,8 @@
             </div>
             <form action="process/login.php" method="post" role="form" class="FormCatElec" data-form="login">
                 <div class="form-group label-floating">
-                    <label class="control-label"><span class="glyphicon glyphicon-user"></span>&nbsp;Nombre</label>
-                    <input type="text" class="form-control" name="nombre-login" required="">
+                    <label class="control-label"><span class="glyphicon glyphicon-user"></span>&nbsp;Nombre Usuario</label>
+                    <input type="text" class="form-control" name="user-login" required="">
                 </div>
                 <div class="form-group label-floating">
                     <label class="control-label"><span class="glyphicon glyphicon-lock"></span>&nbsp;Contraseña</label>

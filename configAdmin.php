@@ -30,7 +30,7 @@
             </li>
             <li>
               <a href="configAdmin.php?view=customerlist">
-                <i class="fa fa-truck" aria-hidden="true"></i> &nbsp; Clientes
+                <i class="fa fa-user" aria-hidden="true"></i> &nbsp; Clientes
               </a>
             </li>
             <li>

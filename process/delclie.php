@@ -3,10 +3,10 @@ session_start();
 include '../library/configServer.php';
 include '../library/consulSQL.php';
 
-$idClie = consultasSQL::clean_string($_POST['id-clie']);
-$cons = ejecutarSQL::consultar("SELECT * FROM clientes WHERE id_clie='$idClie'");
+$nitClie = consultasSQL::clean_string($_POST['nit-clie']);
+$cons = ejecutarSQL::consultar("SELECT * FROM venta WHERE NIT='$nitClie'");
 if (mysqli_num_rows($cons) <= 0) {
-	if (consultasSQL::DeleteSQL('clientes', "id_clie='" . $idClie
+	if (consultasSQL::DeleteSQL('cliente', "NIT='" . $nitClie
 		. "'")) {
 		echo '<script>
 				swal({
