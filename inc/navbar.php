@@ -56,7 +56,7 @@
                           echo ' 
 
                           <a href="registration.php" class="table-cell-td">Registrarse</a>
-                              <a href="#" class="table-cell-td" data-toggle="modal" data-target=".modal-login">
+                              <a href="#" class="table-cell-td" id="efecto-login" data-toggle="modal" data-target=".modal-login">
                                   <i class="fa fa-user"></i>&nbsp;&nbsp;Iniciar Sesión
                               </a>
                            ';

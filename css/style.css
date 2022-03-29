@@ -105,8 +105,13 @@ nav {
   color: #fff;
 }
 .contenedor-tr > a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  /* background-color: rgba(255, 255, 255, 0.1); */
   transition: background-color 0.4s ease-in;
+  background: #868686;
+  border-color: #f74f0d;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
 }
 .contenedor-tr > a:last-child {
   border-right: 1px solid rgba(255, 255, 255, 0.3);
@@ -118,6 +123,13 @@ nav {
   text-align: center;
   width: 20%;
 }
+#efecto-login:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(241, 103, 39);
+  border-style: solid;
+  border-color: rgb(255, 206, 116);
+}
+
 .table-cell-td:focus {
   outline: none;
 }
