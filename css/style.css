@@ -188,7 +188,7 @@ footer a {
 }
 /* ========================================= index styles ======================================*/
 #container-page-index {
-  background-image: url("../assets/img/font-index.JPG");
+  background-image: url("../assets/img/font-index.JPG"); 
 }
 #new-prod-index {
   background-color: rgba(255, 255, 255, 0.9);
@@ -241,5 +241,10 @@ footer a {
 
 #boton{
   background-color: #f74f0d;
+  color: white;
+}
+
+#botonLogin{
+  background-color: #1d88b6;
   color: white;
 }

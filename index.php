@@ -109,7 +109,7 @@
                 </div>
 
                 <div class="col-xs-12 col-sm-6">
-                    <img src="assets/img/tv.png" alt="Smart-TV" class="img-responsive" style="width: 70%; display: block; margin: 0 auto;">
+                    <img src="assets/img/vitrina.png" alt="vitrina" class="img-responsive" style="width: 70%; display: block; margin: 0 auto;">
                 </div>
             </div>
         </div>
