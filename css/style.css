@@ -240,3 +240,8 @@ footer a {
   background-color: #fff;
   min-height: 900px;
 }
+
+#boton{
+  background-color: #f74f0d;
+  color: white;
+}
