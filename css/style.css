@@ -123,12 +123,10 @@ nav {
   text-align: center;
   width: 20%;
 }
-#efecto-login:hover{
-  background-color: rgb(255, 255, 255);
-  color: rgb(241, 103, 39);
-  border-style: solid;
-  border-color: rgb(255, 206, 116);
-}
+/* #efecto-login:hover{
+  background: rgb(0,76,123);
+  border-color: #f74f0d;
+} */
 
 .table-cell-td:focus {
   outline: none;
