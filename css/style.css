@@ -107,9 +107,9 @@ nav {
 .contenedor-tr > a:hover {
   /* background-color: rgba(255, 255, 255, 0.1); */
   transition: background-color 0.4s ease-in;
-  background: #868686;
+  background: rgb(0,76,123);
   border-color: #f74f0d;
-  border-radius: 4px;
+  border-radius: 15px;
   border-style: solid;
   border-width: 1px;
 }
@@ -239,9 +239,4 @@ footer a {
 #prove-product-cat-config {
   background-color: #fff;
   min-height: 900px;
-}
-
-#boton{
-  background-color: #f74f0d;
-  color: white;
 }
