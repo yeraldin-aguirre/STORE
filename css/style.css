@@ -31,50 +31,35 @@ body {
   background-size: cover;
   background-color: #fff;
 }
+
 /* ----------------------ESTILOS HEADER------------------------------------------------ */
 header {
   position: relative;
   width: 100%;
-  height: 163px;
-  background: rgb(255, 255, 255);
+  height: auto;
+  background-color: #fff;
+  display: flex;
 }
 
-#cont_logo {
-  position: absolute;
-  height: 163px;
-  width: 163px;
-  top: 0px;
-  /* left: 10px; */
-  background-color: rgb(255, 255, 255);
-  border-radius: 50%;
-  border-top-left-radius: 0;
-  z-index: 1;
-  /* border-style: solid;
-  border-width: 8px;
-  border-color: rgb(247, 79, 13); */
+/* -------------------logo--------------- */
+header .cont_logo{
+  text-align: center;
+  float: left;
 }
-#logo {
-  height: 103px;
-  width: 90px;
-  top: 17px;
-  left: 23px;
-  position: absolute;
+#logo{
+  width: auto;
+  height: auto;
 }
 
-.img_promo {
-  position: absolute;
-  height: 163px;
-  width: 100%;
-  border-bottom-left-radius: 81px;
-  top: 0px;
-  
+/* -------------------Baner--------------- */
+header .cont_banner{
+  text-align: center;
+  float: left;
+}
+#banner{
+  width: auto;
 }
 
-#banner {
-  position: relative;
-  left: 130px;
-  height: 147px;
-}
 /* ----------------------ESTILOS NAV-------------------- */
 nav {
   width: 100%;
