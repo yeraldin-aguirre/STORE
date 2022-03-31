@@ -18,6 +18,10 @@ include './library/consulSQL.php';
       <div class="page-header">
         <h1>PRODUCTOS <small class="tittles-pages-logo">MaxVitrinas</small></h1>
       </div>
+      <?php
+      $checkAllCat = ejecutarSQL::consultar("SELECT * FROM categoria");
+      if (mysqli_num_rows($checkAllCat) >= 1) :
+        ?>
         <div class="container-fluid">
           <div class="row">
             <div class="col-xs-12 col-md-4">
@@ -28,7 +32,6 @@ include './library/consulSQL.php';
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="drpdowncategory">
                   <?php
-                  $checkAllCat = ejecutarSQL::consultar("SELECT * FROM categoria");
                   while ($cate = mysqli_fetch_array($checkAllCat, MYSQLI_ASSOC)) {
                     echo '
                     <li><a href="product.php?categ=' . $cate['CodigoCat'] . '">' . $cate['Nombre'] . '</a></li>
@@ -54,9 +57,9 @@ include './library/consulSQL.php';
             </div>
           </div>
         </div>
-        
         <?php
         $categoria = consultasSQL::clean_string($_GET['categ']);
+        if (isset($categoria) && $categoria != "") {
         ?>
           <div class="row">
             <?php
@@ -67,8 +70,7 @@ include './library/consulSQL.php';
             $regpagina = 20;
             $inicio = ($pagina > 1) ? (($pagina * $regpagina) - $regpagina) : 0;
             $query = '';
-            $comprobacion = (isset($categoria) && $categoria != "");
-            if($comprobacion){
+            if(isset($categoria)){
               $query = "SELECT SQL_CALC_FOUND_ROWS * FROM producto WHERE CodigoCat='$categoria' AND Stock > 0 AND Estado='Activo' LIMIT $inicio, $regpagina";
             } else {
               $query = "SELECT SQL_CALC_FOUND_ROWS * FROM producto WHERE Stock > 0 AND Estado='Activo' LIMIT $inicio, $regpagina";
@@ -85,8 +87,7 @@ include './library/consulSQL.php';
 
             // Listadado de productos por categoría.
             if (mysqli_num_rows($consultar_productos) >= 1) {
-              $texto = $comprobacion ? 'Se muestran los productos de la categoría <strong>"' . $datCat['Nombre'] . '</strong>"' : "Listando todos los productos";
-              echo '<h3 class="text-center">'.$texto.'</h3><br>';
+              echo '<h3 class="text-center">Se muestran los productos de la categoría <strong>"' . $datCat['Nombre'] . '"</strong></h3><br>';
               while ($prod = mysqli_fetch_array($consultar_productos, MYSQLI_ASSOC)) {
             ?>
                 <div class="col-xs-12 col-sm-6 col-md-4">
@@ -173,7 +174,12 @@ include './library/consulSQL.php';
             ?>
           </div>
       <?php
-      
+        } else {
+          echo '<h2 class="text-center">Por favor seleccione una categoría para empezar</h2>';
+        }
+      else :
+        echo '<h2 class="text-center">Lo sentimos, no hay productos ni categorías registradas en la tienda</h2>';
+      endif;
       ?>
     </div>
   </section>
