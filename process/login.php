@@ -3,16 +3,16 @@ session_start();
 include '../library/configServer.php';
 include '../library/consulSQL.php';
 
-$nombre = consultasSQL::clean_string($_POST['nombre-login']);
+$User = consultasSQL::clean_string($_POST['user-login']);
 $clave = consultasSQL::clean_string(md5($_POST['clave-login']));
 $radio = consultasSQL::clean_string($_POST['optionsRadios']);
-if ($nombre != "" && $clave != "") {
+if ($User != "" && $clave != "") {
     if ($radio == "option2") {
-        $verAdmin = ejecutarSQL::consultar("SELECT * FROM administrador WHERE Nombre='$nombre' AND Clave='$clave'");
+        $verAdmin = ejecutarSQL::consultar("SELECT * FROM administrador WHERE Nombre='$User' AND Clave='$clave'");
         $AdminC = mysqli_num_rows($verAdmin);
         if ($AdminC > 0) {
             $filaU = mysqli_fetch_array($verAdmin, MYSQLI_ASSOC);
-            $_SESSION['nombreAdmin'] = $nombre;
+            $_SESSION['nombreAdmin'] = $User;
             $_SESSION['claveAdmin'] = $clave;
             $_SESSION['UserType'] = "Admin";
             $_SESSION['adminID'] = $filaU['id'];
@@ -22,11 +22,11 @@ if ($nombre != "" && $clave != "") {
         }
     }
     if ($radio == "option1") {
-        $verUser = ejecutarSQL::consultar("SELECT * FROM cliente WHERE Nombre='$nombre' AND Clave='$clave'");
+        $verUser = ejecutarSQL::consultar("SELECT * FROM cliente WHERE NombreUsuario='$User' AND Clave='$clave'");
         $filaU = mysqli_fetch_array($verUser, MYSQLI_ASSOC);
         $UserC = mysqli_num_rows($verUser);
         if ($UserC > 0) {
-            $_SESSION['nombreUser'] = $nombre;
+            $_SESSION['nombreUser'] = $User;
             $_SESSION['claveUser'] = $clave;
             $_SESSION['UserType'] = "User";
             $_SESSION['UserNIT'] = $filaU['NIT'];

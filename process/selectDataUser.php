@@ -23,7 +23,7 @@ if (mysqli_num_rows($SelectUser) == 1) {
                   <div class="col-xs-12 col-sm-6">
                     <div class="form-group label-floating">
                       <label class="control-label"><i class="fa fa-user"></i>&nbsp; Nombres</label>
-                      <input class="form-control" type="text" required name="clien-fullname" value="' . $DataUser['NombreCompleto'] . '" title="Ingrese sus nombres (solamente letras)" pattern="[a-zA-Z ]{1,50}" maxlength="50">
+                      <input class="form-control" type="text" required name="clien-name" value="' . $DataUser['Nombre'] . '" title="Ingrese sus nombres (solamente letras)" pattern="[a-zA-Z ]{1,50}" maxlength="50">
                     </div>
                   </div>
                   <div class="col-xs-12 col-sm-6">
@@ -53,11 +53,11 @@ if (mysqli_num_rows($SelectUser) == 1) {
                   <div class="col-xs-12">
                     <legend><i class="fa fa-lock"></i> &nbsp; Datos de la cuenta</legend>
                   </div>
-                  <input type="hidden" name="clien-old-name" value="' . $DataUser['Nombre'] . '">
+                  <input type="hidden" name="clien-old-name" value="' . $DataUser['NombreUsuario'] . '">
                   <div class="col-xs-12">
                     <div class="form-group label-floating">
                       <label class="control-label"><i class="fa fa-user-circle-o" aria-hidden="true"></i>&nbsp; Nombre de usuario</label>
-                        <input class="form-control" type="text" required name="clien-name" value="' . $DataUser['Nombre'] . '" title="Ingrese su nombre. Máximo 9 caracteres (solamente letras y numeros sin espacios)" pattern="[a-zA-Z0-9]{1,9}" maxlength="9">
+                        <input class="form-control" type="text" required name="clien-user" value="' . $DataUser['NombreUsuario'] . '" title="Ingrese su nombre. Máximo 9 caracteres (solamente letras y numeros sin espacios)" pattern="[a-zA-Z0-9]{1,9}" maxlength="9">
                     </div>
                   </div>
                 

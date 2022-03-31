@@ -26,8 +26,8 @@
                               <th class="text-center">Nombre</th>
                               <th class="text-center">Categoría</th>
                               <th class="text-center">Precio</th>
-                              <th class="text-center">Modelo</th>
-                              <th class="text-center">Marca</th>
+                              <th class="text-center">Dimensión</th>
+                              <th class="text-center">Material</th>
                               <th class="text-center">Stock</th>
                               <th class="text-center">Proveedor</th>
                               <th class="text-center">Estado</th>
@@ -65,9 +65,9 @@
                         			echo $datc['Nombre'];
                         		?>
                         	</td>
-                        	<td class="text-center"><?php echo $prod['Precio']; ?></td>
-                        	<td class="text-center"><?php echo $prod['Modelo']; ?></td>
-                        	<td class="text-center"><?php echo $prod['Marca']; ?></td>
+                        	<td class="text-center">$<?php echo $prod['Precio']; ?></td>
+                        	<td class="text-center"><?php echo $prod['Dimension']; ?></td>
+                        	<td class="text-center"><?php echo $prod['Material']; ?></td>
                         	<td class="text-center"><?php echo $prod['Stock']; ?></td>
                         	<td class="text-center">
                         		<?php

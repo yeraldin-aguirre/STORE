@@ -132,8 +132,8 @@ CREATE TABLE `producto` (
   `CodigoCat` varchar(30) NOT NULL,
   `Precio` decimal(30,2) NOT NULL,
   `Descuento` int(2) NOT NULL,
-  `Modelo` varchar(30) NOT NULL,
-  `Marca` varchar(30) NOT NULL,
+  `Dimension` varchar(30) NOT NULL,
+  `Material` varchar(30) NOT NULL,
   `Stock` int(20) NOT NULL,
   `NITProveedor` varchar(30) NOT NULL,
   `Imagen` varchar(150) NOT NULL,
@@ -145,7 +145,7 @@ CREATE TABLE `producto` (
 -- Volcado de datos para la tabla `producto`
 --
 
-INSERT INTO `producto` (`id`, `CodigoProd`, `NombreProd`, `CodigoCat`, `Precio`, `Descuento`, `Modelo`, `Marca`, `Stock`, `NITProveedor`, `Imagen`, `Nombre`, `Estado`) VALUES
+INSERT INTO `producto` (`id`, `CodigoProd`, `NombreProd`, `CodigoCat`, `Precio`, `Descuento`, `Dimension`, `Material`, `Stock`, `NITProveedor`, `Imagen`, `Nombre`, `Estado`) VALUES
 (4, '04', 'vitrina de lujo', '01', '500000.00', 5, 'basico', 'deluxe', 45, '3534534534', '04.jpg', 'admin', 'Activo'),
 (5, '05', 'vitrina panaderia', '01', '300000.00', 0, 'basico', 'royal', 30, '3534534534', '05.jpg', 'admin', 'Activo');
 

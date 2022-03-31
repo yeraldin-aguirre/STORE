@@ -39,7 +39,7 @@
                               <div class="col-xs-12 col-sm-6">
                                 <div class="form-group label-floating">
                                   <label class="control-label"><i class="fa fa-user"></i>&nbsp; Ingrese sus nombres</label>
-                                  <input class="form-control" type="text" required name="clien-fullname" title="Ingrese sus nombres (solamente letras)" pattern="[a-zA-Z ]{1,50}" maxlength="50">
+                                  <input class="form-control" type="text" required name="clien-name" title="Ingrese sus nombres (solamente letras)" pattern="[a-zA-Z ]{1,50}" maxlength="50">
                                 </div>
                               </div>
                               <div class="col-xs-12 col-sm-6">
@@ -72,7 +72,7 @@
                               <div class="col-xs-12">
                                 <div class="form-group label-floating">
                                   <label class="control-label"><i class="fa fa-user-circle-o" aria-hidden="true"></i>&nbsp; Ingrese su nombre de usuario</label>
-                                    <input class="form-control" type="text" required name="clien-name" title="Ingrese su nombre. Máximo 9 caracteres (solamente letras y numeros sin espacios)" pattern="[a-zA-Z0-9]{1,9}" maxlength="9">
+                                    <input class="form-control" type="text" required name="clien-user" title="Ingrese su nombre. Máximo 9 caracteres (solamente letras y numeros sin espacios)" pattern="[a-zA-Z0-9]{1,9}" maxlength="9">
                                 </div>
                               </div>
                               <div class="col-xs-12 col-sm-6">

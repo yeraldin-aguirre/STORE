@@ -69,7 +69,7 @@
                      <div class="thumbnail">
                        <img class="img-product" src="assets/img-products/<?php if($fila['Imagen']!="" && is_file("./assets/img-products/".$fila['Imagen'])){ echo $fila['Imagen']; }else{ echo "default.png"; } ?>">
                        <div class="caption">
-                       		<h3><?php echo $fila['Marca']; ?></h3>
+                       		<h3><?php echo $fila['Material']; ?></h3>
                             <p><?php echo $fila['NombreProd']; ?></p>
                             <?php if($fila['Descuento']>0): ?>
                              <p>
