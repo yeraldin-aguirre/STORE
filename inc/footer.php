@@ -4,39 +4,32 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
-                <h4 class="text-footer">Contactanos</h4>
-                <a href="#" target="_blank">
+                <h4 class="text-footer">Contáctanos</h4>
+                <a href="https://web.facebook.com/Max-Vitrinas-113812474134786" target="_blank">
                     <i class="fa fa-facebook" aria-hidden="true">&nbsp; Facebook </i> 
                 </a><br>
-                <a href="#" target="_blank">
-                    <i class="fa fa-twitter" aria-hidden="true">&nbsp; Twitter </i>
-                </a><br>
-                <a href="#" target="_blank">
-                    <i class="fa fa-youtube-play" aria-hidden="true">&nbsp; YouTube </i>
-                </a><br>
-                <a href="#" target="_blank">
+                <a href="https://www.instagram.com/maxvitrinas" target="_blank">
                     <i class="fa fa-instagram" aria-hidden="true">&nbsp; Instagram </i>
                 </a><br>
-                <a href="#" target="_blank">
-                    <i class="fa fa-map-marker" aria-hidden="true">&nbsp; Encuentranos </i>
+                <a href="https://goo.gl/maps/FaMVxSbJesVCYWZ5A" target="_blank">
+                    <i class="fa fa-map-marker" aria-hidden="true">&nbsp; Encuéntranos </i>
                 </a>
             </div>
             <div class="col-sm-4">
-                <h4 class="text-footer">¿Porque elegirnos?</h4>
-                <p> 
-                    MAX VITRINAS INFO</br>
-                    MAX VITRINAS INFO</br>
-                    MAX VITRINAS INFO</br>
-                    MAX VITRINAS INFO</br>
+                <h4 class="text-footer">¿Quiénes somos?</h4>
+                <p> Somos una empresa en crecimiento, somos <br>
+                    productores de vitrinas para negocios y <br>
+                    vitrinas de lujo, nuestra meta es ayudar <br>
+                    a todos los nuevos emprendedores que <br>
+                    quieran iniciar con sus propios negocios 
                 </p>
             </div>
             <div class="col-sm-4">
-                <h4 class="text-footer" >Direccion</h4>
-                <p style="color: #FFF">Cali, Valle</p>
-                <p style="color: #FFF">Carrera ..</p>
-                <p style="font-size:20px" aria-hidden="true">  000 – 000000 / 000 – 000000</p>
-                <p class="fa fa-mobile" style="font-size:20px"  aria-hidden="true">  00000000 / 0000000</p> <a href="#" target="_blank" style="color: #5bc0de">envianos_un_mensaje</a></br>
-                E-mail: <a href="#" target="_blank" style="color: #5bc0de"> &nbsp; ejemplod@dominio.com</a>
+                <h4 class="text-footer" >Dirección</h4>
+                <p style="color: #FFF">Cali, Valle del Cauca</p>
+                <p style="color: #FFF">Cl. 20 #7-09 Barrio San Nicolás</p>
+                <p class="fa fa-mobile" style="font-size:20px"  aria-hidden="true">  317-6772998 </p></br>
+                <p> E-mail: maxvitrinas@gmail.com</a></p>
             </div>
         </div>
     </div>
