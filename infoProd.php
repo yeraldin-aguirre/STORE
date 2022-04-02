@@ -16,7 +16,7 @@ include './library/consulSQL.php';
         <div class="container">
             <div class="row">
                 <div class="page-header">
-                    <h1>DETALLE DE PRODUCTO <small class="tittles-pages-logo">STORE</small></h1>
+                    <h1>DETALLE DE PRODUCTO <small class="tittles-pages-logo">MAX-VITRINAS</small></h1>
                 </div>
                 <?php 
                     $CodigoProducto=consultasSQL::clean_string($_GET['CodigoProd']);

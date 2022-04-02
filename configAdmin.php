@@ -14,7 +14,7 @@
     <section id="prove-product-cat-config">
         <div class="container">
           <div class="page-header">
-            <h1>Panel de administración <small class="tittles-pages-logo">MaxVitrinas</small></h1>
+            <h1>Panel de administración <small class="tittles-pages-logo">MAX-VITRINAS</small></h1>
           </div>
           <!--====  Nav Tabs  ====-->
           <ul class="nav nav-tabs nav-justified" style="margin-bottom: 15px;">
