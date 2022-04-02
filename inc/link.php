@@ -21,3 +21,6 @@
 		$.material.init();
 	});
 </script>
+<head>
+<link rel="icon" type="" href="assets/img/Favicom.png">
+</head>
