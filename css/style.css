@@ -34,30 +34,21 @@ body {
 
 /* ----------------------ESTILOS HEADER------------------------------------------------ */
 header {
-  position: relative;
-  width: 100%;
-  height: auto;
+  background: url("../assets/img/BannerMV.png") no-repeat center;
+  height: 200px;
+  display: block;
   background-color: #fff;
-  display: flex;
 }
 
 /* -------------------logo--------------- */
 header .cont_logo{
-  text-align: center;
-  float: left;
+  height: 200px;
+  display: flex;
 }
 #logo{
-  width: auto;
-  height: auto;
-}
-
-/* -------------------Baner--------------- */
-header .cont_banner{
-  text-align: center;
-  float: left;
-}
-#banner{
-  width: auto;
+  height: 180px;
+  margin-left: 50px;
+  margin-top: 10px;
 }
 
 /* ----------------------ESTILOS NAV-------------------- */
