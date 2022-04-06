@@ -34,32 +34,32 @@ error_reporting(E_PARSE);
                     <?php
                     if (!$_SESSION['nombreAdmin'] == "") {
                         echo ' 
-                              <a href="carrito.php" class="table-cell-td">Carrito</a>
-                              <a href="configAdmin.php" class="table-cell-td">Administración</a>
-                              <a href="#!" class="table-cell-td exit-system">
-                                  <i class="fa fa-user"></i>&nbsp;&nbsp;' . $_SESSION['nombreAdmin'] . '
-                              </a>
-                           ';
+                                <a href="carrito.php" class="table-cell-td">Carrito</a>
+                                <a href="configAdmin.php" class="table-cell-td">Administración</a>
+                                <a href="#!" class="table-cell-td exit-system">
+                                    <i class="fa fa-user"></i>&nbsp;&nbsp;' . $_SESSION['nombreAdmin'] . '
+                                </a>
+                            ';
                     } else if (!$_SESSION['nombreUser'] == "") {
                         echo ' 
 
-                              <a href="pedido.php" class="table-cell-td">Pedido</a>
-                              <a href="carrito.php" class="table-cell-td">Carrito</a>
-                              <a href="#!" class="table-cell-td exit-system">
-                              <i class="fa fa-user"></i>&nbsp;&nbsp;' . $_SESSION['nombreUser'] . '
-                              </a>
-                              <a href="#!" class="table-cell-td userConBtn" data-code="' . $_SESSION['UserNIT'] . '">
-                                <i class="glyphicon glyphicon-cog"></i>
-                              </a>
-                           ';
+                                <a href="pedido.php" class="table-cell-td">Pedido</a>
+                                <a href="carrito.php" class="table-cell-td">Carrito</a>
+                                <a href="#!" class="table-cell-td exit-system">
+                                <i class="fa fa-user"></i>&nbsp;&nbsp;' . $_SESSION['nombreUser'] . '
+                                </a>
+                                <a href="#!" class="table-cell-td userConBtn" data-code="' . $_SESSION['UserNIT'] . '">
+                                    <i class="glyphicon glyphicon-cog"></i>
+                                </a>
+                            ';
                     } else {
                         echo ' 
 
-                          <a href="registration.php" class="table-cell-td">Registrarse</a>
-                              <a href="#" class="table-cell-td" id="efecto-login" data-toggle="modal" data-target=".modal-login">
-                                  <i class="fa fa-user"></i>&nbsp;&nbsp;Iniciar Sesión
-                              </a>
-                           ';
+                            <a href="registration.php" class="table-cell-td">Registrarse</a>
+                                <a href="#" class="table-cell-td" id="efecto-login" data-toggle="modal" data-target=".modal-login">
+                                    <i class="fa fa-user"></i>&nbsp;&nbsp;Iniciar Sesión
+                                </a>
+                            ';
                     }
                     ?>
                 </div>
@@ -87,10 +87,10 @@ error_reporting(E_PARSE);
                     </a>';
             } else {
                 echo '
-                       <a href="#" data-toggle="modal" data-target=".modal-login" id="button-login-xs" class="elements-nav-xs">
+                        <a href="#" data-toggle="modal" data-target=".modal-login" id="button-login-xs" class="elements-nav-xs">
                         <i class="fa fa-user"></i>&nbsp; Iniciar Sesión
                         </a> 
-                   ';
+                    ';
             }
             ?>
         </div>
@@ -148,7 +148,7 @@ error_reporting(E_PARSE);
 
 <div id="mobile-menu-list" class="hidden-sm hidden-md hidden-lg">
     <br>
-    <h3 class="text-center tittles-pages-logo">STORE</h3>
+    <h3 class="text-center tittles-pages-logo">MaxVitrinas</h3>
     <button class="btn btn-default button-mobile-menu" id="button-close-mobile-menu">
         <i class="fa fa-times"></i>
     </button>

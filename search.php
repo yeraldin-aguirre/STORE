@@ -16,7 +16,7 @@ include './library/consulSQL.php';
     <br>
     <div class="container">
       <div class="page-header">
-        <h1>BÚSQUEDA DE PRODUCTOS <small class="tittles-pages-logo">STORE</small></h1>
+        <h1>BÚSQUEDA DE PRODUCTOS <small class="tittles-pages-logo">MaxVitrinas</small></h1>
       </div>
       <div class="container-fluid">
         <div class="row">
