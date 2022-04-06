@@ -34,22 +34,19 @@ body {
 
 /* ----------------------ESTILOS HEADER------------------------------------------------ */
 header {
-  /* background: url("../assets/img/BannerMV.png") no-repeat center; */
-  /* height: 200px; */
-  /* background: url("../assets/img/bannerV3.png") no-repeat center; */
-  background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
 }
 @media screen and (max-width: 768px) {
-  #banner{
+    #contBanner{
     display: none;
-  }
+    }
 }
-#img_banner{
-  display: block;
-  margin: auto;
-  width: 100%;
-  max-width: 1366px;
-  min-width: 340px;
+#imgBanner{
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 1366px;
+    min-width: 340px;
 }
 /* -------------------logo--------------- */
 header .cont_logo {

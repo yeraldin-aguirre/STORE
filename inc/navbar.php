@@ -4,21 +4,9 @@ error_reporting(E_PARSE);
 ?>
 
 <header>
-
-    <!-- <picture class="picture">
-        <source media="(max-width: 576px)" srcset="">
-        <source media="(max-width: 922px)" srcset="assets/img/Favicom.png">
-        <source media="(min-width: **923px**)" srcset="assets/img/BannerMV.png">
-        <img id="logo" src="assets/img/BannerMV.png" alt="">
-    </picture> -->
-
-    <!------------------------------------ LOGO IZQUIERDA SUPERIOR----------------------------------------------->
-
-    <!-- <div id="cont_logo">
-        <img id="logo" src="assets/img/Favicom.png" alt="" />
-    </div> -->
-    <div id="banner"> <img src="assets/img/banner_V3.png" id="img_banner"></div>
-
+    <div id="contBanner">
+        <img id="imgBanner" src="assets/img/banner_V3.png" alt="banner empresa">
+    </div>
 </header>
 
 <nav id="navbar-auto-hidden">
