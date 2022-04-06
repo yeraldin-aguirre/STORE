@@ -1,6 +1,6 @@
 <?php
 session_start();
-require './fpdf/fpdf.php';
+require './fpdf/tfpdf.php';
 include '../library/configServer.php';
 include '../library/consulSQL.php';
 $id=$_GET['id'];
@@ -8,7 +8,7 @@ $sVenta=ejecutarSQL::consultar("SELECT * FROM venta WHERE NumPedido='$id'");
 $dVenta=mysqli_fetch_array($sVenta, MYSQLI_ASSOC);
 $sCliente=ejecutarSQL::consultar("SELECT * FROM cliente WHERE NIT='".$dVenta['NIT']."'");
 $dCliente=mysqli_fetch_array($sCliente, MYSQLI_ASSOC);
-class PDF extends FPDF{
+class PDF extends tFPDF{
 }
 ob_end_clean();
 $pdf=new PDF('P','mm','Letter');
