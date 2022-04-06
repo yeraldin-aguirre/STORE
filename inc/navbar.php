@@ -14,9 +14,11 @@ error_reporting(E_PARSE);
 
     <!------------------------------------ LOGO IZQUIERDA SUPERIOR----------------------------------------------->
 
-    <div id="cont_logo">
+    <!-- <div id="cont_logo">
         <img id="logo" src="assets/img/Favicom.png" alt="" />
-    </div>
+    </div> -->
+    <div id="banner"> <img src="assets/img/banner_V3.png" id="img_banner"></div>
+
 </header>
 
 <nav id="navbar-auto-hidden">
