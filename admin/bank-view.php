@@ -15,7 +15,7 @@
                             <div class="col-xs-12 col-sm-6">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Número de cuenta</label>
-                                    <input class="form-control" type="number" name="bancoCuenta" value="<?php echo $bankD['NumeroCuenta']; ?>" maxlength="20" required="" pattern="[0-9]{10,20}">
+                                    <input class="form-control" type="text" name="bancoCuenta" value="<?php echo $bankD['NumeroCuenta']; ?>" maxlength="20" required="" pattern="[ |0-9]{10,20}">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
@@ -52,7 +52,7 @@
                         <div class="col-xs-12 col-sm-6">
                             <div class="form-group label-floating">
                                 <label class="control-label">Numero de cuenta</label>
-                                <input class="form-control" type="number" name="bancoCuenta" maxlength="20" required="" pattern="[0-9]{10,20}">
+                                <input class="form-control" type="text" name="bancoCuenta" maxlength="20" required="" pattern="[ |0-9]{10,20}">
                             </div> 
                         </div>
                         <div class="col-xs-12 col-sm-6">
