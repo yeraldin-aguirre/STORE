@@ -42,7 +42,7 @@ if (!$nitCliente == "" && !$nameCliente == "" && !$apeCliente == "" && !$dirClie
 				echo '<script>swal("ERROR", "Ocurrió un error inesperado, por favor intente nuevamente", "error");</script>';
 			}
 		} else {
-			echo '<script>swal("ERROR", "El DNI que ha ingresado ya está registrado en el sistema, por favor ingrese otro número de DNI", "error");</script>';
+			echo '<script>swal("ERROR", "La cédula que ha intentado registrar ya está registrada en el sistema, por favor ingrese otro número de cédula", "error");</script>';
 		}
 		mysqli_free_result($verificar);
 	} else {

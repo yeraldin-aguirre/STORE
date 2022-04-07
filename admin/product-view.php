@@ -25,19 +25,19 @@
               <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="form-group label-floating">
                   <label class="control-label">Código de producto</label>
-                  <input type="text" class="form-control" required maxlength="30" name="prod-codigo">
+                  <input type="text" class="form-control" required maxlength="30" name="prod-codigo" pattern="[-|0-9]{1,30}">
                 </div>
               </div>
               <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="form-group label-floating">
                   <label class="control-label">Nombre de producto</label>
-                  <input type="text" class="form-control" required maxlength="30" name="prod-name">
+                  <input type="text" class="form-control" required maxlength="30" name="prod-name" pattern="[ |a-zA-Z]{1,30}">
                 </div>
               </div>
               <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="form-group label-floating">
                   <label class="control-label">Material</label>
-                  <input type="text" class="form-control" required name="prod-mate">
+                  <input type="text" class="form-control" required name="prod-mate" pattern="[ |a-zA-Z0-9]{1,40}">
                 </div>
               </div>
               <div class="col-xs-12 col-sm-6 col-md-4">

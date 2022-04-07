@@ -22,13 +22,13 @@
                             <div class="col-xs-12 col-sm-6 col-md-4">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Código</label>
-                                    <input class="form-control" type="text" name="categ-code" maxlength="9" required="">
+                                    <input class="form-control" type="text" name="categ-code" required="" pattern="[a-zA-Z0-9]{1,9}">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-4">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Nombre</label>
-                                    <input class="form-control" type="text" name="categ-name" maxlength="30" required="">
+                                    <input class="form-control" type="text" name="categ-name" required="" pattern="[ |a-zA-Z]{1,30}">
                                 </div>  
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-4">

@@ -16,7 +16,7 @@ if (mysqli_num_rows($SelectUser) == 1) {
                   </div>
                   <div class="col-xs-12">
                     <div class="form-group label-floating">
-                      <label class="control-label"><i class="fa fa-address-card-o" aria-hidden="true"></i>&nbsp; DNI</label>
+                      <label class="control-label"><i class="fa fa-address-card-o" aria-hidden="true"></i>&nbsp; Cédula</label>
                       <input class="form-control" type="text" required readonly name="clien-nit" value="' . $DataUser['NIT'] . '">
                     </div>
                   </div>

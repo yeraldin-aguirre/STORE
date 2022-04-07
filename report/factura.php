@@ -32,7 +32,7 @@ $pdf->SetFont("Times","",12);
 $pdf->Cell (100,5,utf8_decode($dCliente['Nombre']." ".$dCliente['Apellido']),0);
 $pdf->Ln(12);
 $pdf->SetFont("Times","b",12);
-$pdf->Cell (30,5,utf8_decode('DNI/CÉDULA: '),0);
+$pdf->Cell (30,5,utf8_decode('CÉDULA: '),0);
 $pdf->SetFont("Times","",12);
 $pdf->Cell (25,5,utf8_decode($dCliente['NIT']),0);
 $pdf->Ln(12);

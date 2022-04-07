@@ -25,19 +25,19 @@
                             <div class="col-xs-12">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Nombre de usuario</label>
-                                    <input class="form-control" type="text" name="admin-name" maxlength="9" pattern="[a-zA-Z0-9]{4,9}" required="">
+                                    <input class="form-control" type="text" name="admin-name" maxlength="9" pattern="[a-zA-Z]{4,9}" required="">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Ingrese la contraseña</label>
-                                    <input class="form-control" type="password" name="admin-pass1" required="">
+                                    <input class="form-control" type="password" name="admin-pass1" required="" pattern=".{8,12}">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Repita la contraseña</label>
-                                    <input class="form-control" type="password" name="admin-pass2" required="">
+                                    <input class="form-control" type="password" name="admin-pass2" required="" pattern=".{8,12}">
                                 </div>
                             </div>
                         </div>

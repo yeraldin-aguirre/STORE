@@ -25,7 +25,7 @@ include './library/consulSQL.php';
               <div class="form-group">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
-                  <input type="text" id="addon1" class="form-control" name="term" required="" title="Escriba nombre del producto">
+                  <input type="text" pattern="[a-zA-Z0-9]{1,40}" id="addon1" class="form-control" name="term" required="" title="Escriba nombre del producto">
                   <span class="input-group-btn">
                     <button class="btn btn-info btn-raised" type="submit">Buscar</button>
                   </span>

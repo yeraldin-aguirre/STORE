@@ -15,25 +15,25 @@
                             <div class="col-xs-12 col-sm-6">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Número de cuenta</label>
-                                    <input class="form-control" type="text" name="bancoCuenta" value="<?php echo $bankD['NumeroCuenta']; ?>" maxlength="50" required="">
+                                    <input class="form-control" type="number" name="bancoCuenta" value="<?php echo $bankD['NumeroCuenta']; ?>" maxlength="20" required="" pattern="[0-9]{10,20}">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Nombre del banco</label>
-                                    <input class="form-control" type="text" name="bancoNombre" value="<?php echo $bankD['NombreBanco']; ?>" maxlength="50" required="">
+                                    <input class="form-control" type="text" name="bancoNombre" value="<?php echo $bankD['NombreBanco']; ?>" required="" pattern="[ |a-zA-Z]{10,30}">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Nombre del beneficiario</label>
-                                    <input class="form-control" type="text" name="bancoBeneficiario" value="<?php echo $bankD['NombreBeneficiario']; ?>" maxlength="50" required="">
+                                    <input class="form-control" type="text" name="bancoBeneficiario" value="<?php echo $bankD['NombreBeneficiario']; ?>" required=""pattern="[ |a-zA-Z]{1,50}">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Tipo de cuenta</label>
-                                    <input class="form-control" type="text" name="bancoTipo" value="<?php echo $bankD['TipoCuenta']; ?>" maxlength="50" required="">
+                                    <input class="form-control" type="text" name="bancoTipo" value="<?php echo $bankD['TipoCuenta']; ?>" required="" pattern="[ |a-zA-Z]{1,30}">
                                 </div>
                             </div>
                         </div>
@@ -52,25 +52,25 @@
                         <div class="col-xs-12 col-sm-6">
                             <div class="form-group label-floating">
                                 <label class="control-label">Numero de cuenta</label>
-                                <input class="form-control" type="text" name="bancoCuenta" maxlength="50" required="">
+                                <input class="form-control" type="number" name="bancoCuenta" maxlength="20" required="" pattern="[0-9]{10,20}">
                             </div> 
                         </div>
                         <div class="col-xs-12 col-sm-6">
                             <div class="form-group label-floating">
                                 <label class="control-label">Nombre del banco</label>
-                                <input class="form-control" type="text" name="bancoNombre" maxlength="50" required="">
+                                <input class="form-control" type="text" name="bancoNombre" maxlength="30" required="" pattern="[ |a-zA-Z]{1,30}">
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6">
                             <div class="form-group label-floating">
                                 <label class="control-label">Nombre del beneficiario</label>
-                                <input class="form-control" type="text" name="bancoBeneficiario" maxlength="50" required="">
+                                <input class="form-control" type="text" name="bancoBeneficiario" maxlength="50" required="" pattern="[ |a-zA-Z]{1,50}">
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6">
                             <div class="form-group label-floating">
                                 <label class="control-label">Tipo de cuenta</label>
-                                <input class="form-control" type="text" name="bancoTipo" maxlength="50" required="">
+                                <input class="form-control" type="text" name="bancoTipo" maxlength="30" required="" pattern="[ |a-zA-Z]{1,30}">
                             </div>
                         </div>
                     </div>
