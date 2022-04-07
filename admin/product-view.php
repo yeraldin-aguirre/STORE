@@ -37,13 +37,13 @@
               <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="form-group label-floating">
                   <label class="control-label">Material</label>
-                  <input type="text" class="form-control" required name="prod-mate" pattern="[ |a-zA-Z0-9]{1,40}">
+                  <input type="text" class="form-control" required name="prod-mate" pattern="[ |a-zA-Z0-9]{1,50}">
                 </div>
               </div>
               <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="form-group label-floating">
                   <label class="control-label">Dimension</label>
-                  <input type="text" class="form-control" required name="prod-dime">
+                  <input type="text" class="form-control" required name="prod-dime" pattern="[. |a-zA-Z0-9]{1,60}">
                 </div>
               </div>
               <div class="col-xs-12 col-sm-6 col-md-4">

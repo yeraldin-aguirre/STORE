@@ -104,7 +104,7 @@ include './library/consulSQL.php';
                       <?php if ($prod['Descuento'] > 0) : ?>
                         <p>
                           <?php
-                          $pref = number_format($prod['Precio'] - ($prod['Precio'] * ($prod['Descuento'] / 100)), 2, '.', '');
+                          $pref = number_format($prod['Precio'] - ($prod['Precio'] * ($prod['Descuento'] / 100)), 0, '.', '');
                           echo $prod['Descuento'] . "% descuento: $" . $pref;
                           ?>
                         </p>

@@ -98,12 +98,12 @@ include './library/consulSQL.php';
                                                                         } ?>
                            ">
                     <div class="caption">
-                      <h3><?php echo $prod['Material']; ?></h3>
-                      <p><?php echo $prod['NombreProd']; ?></p>
+                      <h3><?php echo $prod['NombreProd']; ?></h3>
+                      <p><?php echo $prod['Material']; ?></p>
                       <?php if ($prod['Descuento'] > 0) : ?>
                         <p>
                           <?php
-                          $pref = number_format($prod['Precio'] - ($prod['Precio'] * ($prod['Descuento'] / 100)), 2, '.', '');
+                          $pref = number_format($prod['Precio'] - ($prod['Precio'] * ($prod['Descuento'] / 100)), 0, '.', '');
                           echo $prod['Descuento'] . "% descuento: $" . $pref;
                           ?>
                         </p>
