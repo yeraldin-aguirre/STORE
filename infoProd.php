@@ -24,7 +24,7 @@ include './library/consulSQL.php';
                     while($fila=mysqli_fetch_array($productoinfo, MYSQLI_ASSOC)){
                         echo '
                             <div class="col-xs-12 col-sm-6">
-                                <h3 class="text-center">Información de producto</h3>
+                                <h2 class="text-center">Información del producto</h2>
                                 <br><br>
                                 <h4><strong>Nombre: </strong>'.$fila['NombreProd'].'</h4><br>
                                 <h4><strong>Precio: </strong>$'.number_format(($fila['Precio']-($fila['Precio']*($fila['Descuento']/100))), 2, '.', '').'</h4><br>
@@ -42,7 +42,7 @@ include './library/consulSQL.php';
                                         </form>
                                         <div class="ResForm"></div>';
                                     }else{
-                                        echo '<p class="text-center"><small>Para agregar productos al carrito de compras debes iniciar sesion</small></p><br>';
+                                        echo '<p class="text-center" id="importante"><small>Para agregar productos al carrito de compras debes iniciar sesion*</small></p><br>';
                                         echo '<button class="btn btn-lg btn-raised btn-info btn-block" data-toggle="modal" data-target=".modal-login"><i class="fa fa-user"></i>&nbsp;&nbsp; Iniciar sesion</button>';
                                     }
                                 }else{
