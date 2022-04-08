@@ -79,7 +79,7 @@
                                     <?php if ($fila['Descuento'] > 0) : ?>
                                         <p>
                                             <?php
-                                            $pref = number_format($fila['Precio'] - ($fila['Precio'] * ($fila['Descuento'] / 100)), 0, '.', '');
+                                            $pref = number_format($fila['Precio'] - ($fila['Precio'] * ($fila['Descuento'] / 100)), 2, '.', '');
                                             echo $fila['Descuento'] . "% descuento: $" . $pref;
                                             ?>
                                         </p>

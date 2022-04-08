@@ -51,7 +51,7 @@ if (mysqli_num_rows($verdata) >= 1) {
 		foreach ($_SESSION['carro'] as $codess) {
 			$consulta = ejecutarSQL::consultar("SELECT * FROM producto WHERE CodigoProd='" . $codess['producto'] . "'");
 			while ($fila = mysqli_fetch_array($consulta, MYSQLI_ASSOC)) {
-				$tp = number_format($fila['Precio'] - ($fila['Precio'] * ($fila['Descuento'] / 100)), 0, '.', '');
+				$tp = number_format($fila['Precio'] - ($fila['Precio'] * ($fila['Descuento'] / 100)), 2, '.', '');
 				$suma += $tp * $codess['cantidad'];
 			}
 			mysqli_free_result($consulta);

@@ -44,7 +44,7 @@ include './library/consulSQL.php';
                 <div class="form-group">
                   <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
-                    <input type="text" id="addon1" class="form-control" name="term" required="" title="Escriba nombre del producto">
+                    <input type="text" id="addon1" pattern="[a-zA-Z0-9]{1,40}" class="form-control" name="term" required="" title="Escriba nombre del producto">
                     <span class="input-group-btn">
                       <button class="btn btn-info btn-raised" type="submit">Buscar</button>
                     </span>
@@ -103,7 +103,7 @@ include './library/consulSQL.php';
                       <?php if ($prod['Descuento'] > 0) : ?>
                         <p>
                           <?php
-                          $pref = number_format($prod['Precio'] - ($prod['Precio'] * ($prod['Descuento'] / 100)), 0, '.', '');
+                          $pref = number_format($prod['Precio'] - ($prod['Precio'] * ($prod['Descuento'] / 100)), 2, '.', '');
                           echo $prod['Descuento'] . "% descuento: $" . $pref;
                           ?>
                         </p>

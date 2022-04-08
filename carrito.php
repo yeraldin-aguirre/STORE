@@ -26,7 +26,7 @@
                         foreach ($_SESSION['carro'] as $codeProd) {
                             $consulta = ejecutarSQL::consultar("SELECT * FROM producto WHERE CodigoProd='" . $codeProd['producto'] . "'");
                             while ($fila = mysqli_fetch_array($consulta, MYSQLI_ASSOC)) {
-                                $pref = number_format(($fila['Precio'] - ($fila['Precio'] * ($fila['Descuento'] / 100))), 0, '.', '');
+                                $pref = number_format(($fila['Precio'] - ($fila['Precio'] * ($fila['Descuento'] / 100))), 2, '.', '');
                                 echo "<tbody>
                                             <tr>
                                                 <td>" . $fila['NombreProd'] . "</td>
