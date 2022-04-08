@@ -147,8 +147,8 @@
                 </select>
               </div>
               <div class="form-group">
-                <label>DNI del cliente</label>
-                <input class="form-control" type="text" name="Cedclien" placeholder="DNI del cliente" maxlength="15" required="">
+                <label>Documento del cliente</label>
+                <input class="form-control" type="text" name="Cedclien" placeholder="Documento del cliente" maxlength="15" required="">
               </div>
               <div class="form-group">
                 <input type="file" name="comprobante">

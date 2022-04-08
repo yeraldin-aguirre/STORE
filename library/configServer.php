@@ -11,7 +11,7 @@
 // define("BD", "bmfea3uytnohksj2s0ii");
 // define("PASS", "fftUDqr0VBlDe7ZgW1Mw");
 
-// nube 2
+// // nube 2
 define("USER", "uj1tzajfm4lzmsmq");
 define("SERVER", "b3zglthoxjvvjfskgqqs-mysql.services.clever-cloud.com");
 define("BD", "b3zglthoxjvvjfskgqqs");

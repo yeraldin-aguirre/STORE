@@ -3,12 +3,27 @@ session_start();
 require './fpdf/fpdf.php';
 include '../library/configServer.php';
 include '../library/consulSQL.php';
+
 date_default_timezone_set('America/Bogota');
+
 $id = $_GET['id'];
-$sVenta = ejecutarSQL::consultar("SELECT * FROM venta WHERE NumPedido='$id'");
+$sVenta = ejecutarSQL::consultar("SELECT * FROM reporte WHERE id='$id'");
 $dVenta = mysqli_fetch_array($sVenta, MYSQLI_ASSOC);
-$sCliente = ejecutarSQL::consultar("SELECT * FROM cliente WHERE NIT='" . $dVenta['NIT'] . "'");
-$dCliente = mysqli_fetch_array($sCliente, MYSQLI_ASSOC);
+
+// // Pruebas
+// $fecha = "30-03-2022";
+// $sDet = ejecutarSQL::consultar("SELECT c.Nombre, c.Apellido, c.NIT, d.CantidadProductos, d.PrecioProd, v.Fecha
+//                                     FROM detalle AS d 
+//                                         JOIN venta AS v
+//                                     ON d.NumPedido = v.NumPedido 
+//                                         JOIN cliente AS c 
+//                                     ON v.NIT = c.NIT
+//                                     WHERE Fecha='" . substr($fecha, 0, 10) . "'");
+// $fila1 = mysqli_fetch_array($sDet, MYSQLI_ASSOC);
+// var_dump($fila1);
+// exit;
+
+
 class PDF extends FPDF
 {
 
@@ -47,72 +62,56 @@ class PDF extends FPDF
 ob_end_clean();
 $pdf = new PDF('P', 'mm');
 $pdf->SetAuthor("Max-vitrinas", true);
-$pdf->SetTitle('Factura #' . $id, true);
+$pdf->SetTitle('Reporte_' . $dVenta['tipo'] . 's #' . $id, true);
 $pdf->AddPage();
 $pdf->AliasNbPages();
 $pdf->SetAutoPageBreak(true, 20);
 $pdf->SetTopMargin(500);
 $pdf->SetLeftMargin(20);
 $pdf->SetRightMargin(10);
+$pdf->SetDrawColor(255, 255, 255);
 $pdf->SetFillColor(10, 150, 255);
 $pdf->SetFont("Arial", "", 14);
-$pdf->Cell(170, 8, utf8_decode('Factura de pedido #' . $id), 0, 1, 'C');
+$pdf->Cell(170, 8, utf8_decode('Reporte ' . $dVenta['tipo'] . 's #' . $id), 0, 1, 'C');
 $pdf->Ln(20);
 $pdf->SetFont("Arial", "b", 12);
-$pdf->Cell(40, 5, utf8_decode('Fecha del pedido: '), 0);
+$pdf->Cell(40, 5, utf8_decode('Fecha del Reporte: '), 0);
 $pdf->SetFont("Arial", "", 12);
-$pdf->Cell(37, 5, utf8_decode($dVenta['Fecha']), 0);
+$pdf->Cell(37, 5, utf8_decode($dVenta['fecha']), 0);
 $pdf->Ln(12);
-// Datos cliente
-$pdf->SetFont("Arial", "b", 12);
-$pdf->Cell(40, 5, utf8_decode('Nombre del cliente: '), 0);
-$pdf->SetFont("Arial", "", 12);
-$pdf->Cell(100, 5, utf8_decode($dCliente['Nombre'] . " " . $dCliente['Apellido']), 0);
-$pdf->Ln(12);
-$pdf->SetFont("Arial", "b", 12);
-$pdf->Cell(40, 5, utf8_decode('Documento/cédula: '), 0);
-$pdf->SetFont("Arial", "", 12);
-$pdf->Cell(25, 5, utf8_decode($dCliente['NIT']), 0);
-$pdf->Ln(12);
-$pdf->SetFont("Arial", "b", 12);
-$pdf->Cell(25, 5, utf8_decode('Dirección: '), 0);
-$pdf->SetFont("Arial", "", 12);
-$pdf->Cell(70, 5, utf8_decode($dCliente['Direccion']), 0);
-$pdf->Ln(12);
-$pdf->SetFont("Arial", "b", 12);
-$pdf->Cell(25, 5, utf8_decode('Teléfono: '), 0);
-$pdf->SetFont("Arial", "", 12);
-$pdf->Cell(70, 5, utf8_decode($dCliente['Telefono']), 0);
-$pdf->SetFont("Arial", "b", 12);
-$pdf->Cell(14, 5, utf8_decode('Email: '), 0);
-$pdf->SetFont("Arial", "", 12);
-$pdf->Cell(40, 5, utf8_decode($dCliente['Email']), 0);
-$pdf->Ln(10);
+
 // Tabla
-$pdf->SetDrawColor(255, 255, 255);
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(12, 10, utf8_decode('N°'), 1, 0, 'C', 1);
-$pdf->Cell(76, 10, utf8_decode('item descripción'), 1, 0, 'C', 1);
-$pdf->Cell(30, 10, utf8_decode('Precio'), 1, 0, 'C', 1);
-$pdf->Cell(30, 10, utf8_decode('Cantidad'), 1, 0, 'C', 1);
+$pdf->Cell(70, 10, utf8_decode('Nombre Cliente'), 1, 0, 'C', 1);
+$pdf->Cell(30, 10, utf8_decode('Cédula'), 1, 0, 'C', 1);
+$pdf->Cell(36, 10, utf8_decode('Cantidad productos'), 1, 0, 'C', 1);
 $pdf->Cell(30, 10, utf8_decode('Total'), 1, 1, 'C', 1);
 $pdf->SetFont("Arial", "", 12);
 $suma = 0;
 // Llamado de la base de datos
-$sDet = ejecutarSQL::consultar("SELECT * FROM detalle WHERE NumPedido='" . $id . "'");
+$sDet = ejecutarSQL::consultar("SELECT c.Nombre, c.Apellido, c.NIT, d.CantidadProductos, d.PrecioProd, v.Fecha
+                                    FROM detalle AS d 
+                                        JOIN venta AS v
+                                    ON d.NumPedido = v.NumPedido 
+                                        JOIN cliente AS c 
+                                    ON v.NIT = c.NIT
+                                    WHERE Fecha='" . substr($dVenta['fecha'], 0, 10) . "'");
+$cr = 0;
 while ($fila1 = mysqli_fetch_array($sDet, MYSQLI_ASSOC)) {
-    $consulta = ejecutarSQL::consultar("SELECT * FROM producto WHERE CodigoProd='" . $fila1['CodigoProd'] . "'");
-    $fila = mysqli_fetch_array($consulta, MYSQLI_ASSOC);
+    // $consulta = ejecutarSQL::consultar("SELECT * FROM producto WHERE CodigoProd='" . $fila1['CodigoProd'] . "'");
+    // $fila = mysqli_fetch_array($consulta, MYSQLI_ASSOC);
     $pdf->SetFillColor(255, 255, 255);
     $pdf->SetDrawColor(65, 61, 61);
-    $pdf->Cell(12, 10, utf8_decode('1'), 'B', 0, 'C');
-    $pdf->Cell(76, 10, utf8_decode($fila['NombreProd']), 'B', 0, 'C');
-    $pdf->Cell(30, 10, utf8_decode('$' . $fila1['PrecioProd']), 'B', 0, 'C');
-    $pdf->Cell(30, 10, utf8_decode($fila1['CantidadProductos']), 'B', 0, 'C');
+    $pdf->Cell(12, 10, utf8_decode($cr+1), 'B', 0, 'C');
+    $pdf->Cell(70, 10, utf8_decode($fila1['Nombre']." ". $fila1['Apellido']), 'B', 0, 'C');
+    $pdf->Cell(30, 10, utf8_decode('$' . $fila1['NIT']), 'B', 0, 'C');
+    $pdf->Cell(36, 10, utf8_decode($fila1['CantidadProductos']), 'B', 0, 'C');
     $pdf->Cell(30, 10, utf8_decode('$' . $fila1['PrecioProd'] * $fila1['CantidadProductos']), 'B', 0, 'C');
     $pdf->Ln(10);
     $suma += $fila1['PrecioProd'] * $fila1['CantidadProductos'];
-    mysqli_free_result($consulta);
+    // mysqli_free_result($consulta);
+    $cr++;
 }
 
 $pdf->SetFont("Arial", "b", 12);
@@ -122,7 +121,7 @@ $pdf->Cell(30, 10, utf8_decode(''), 0, 0, 'C');
 $pdf->Cell(30, 10, utf8_decode(''), 0, 0, 'C');
 $pdf->Cell(30, 10, utf8_decode('$' . number_format($suma, 2)), 'B', 0, 'C');
 $pdf->Ln(10);
-$pdf->Output('I', 'Factura-N'. $id.'.pdf');
+
+$pdf->Output('I', 'ReporteCliente-N' . $id . '.pdf');
 mysqli_free_result($sVenta);
-mysqli_free_result($sCliente);
 mysqli_free_result($sDet);
