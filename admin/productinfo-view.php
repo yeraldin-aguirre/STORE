@@ -49,7 +49,7 @@
               <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="form-group label-floating">
                   <label class="control-label">Dimension</label>
-                  <input type="text" class="form-control" value="<?php echo $prod['Dimension']; ?>" required name="prod-dime">
+                  <input type="text" class="form-control" value="<?php echo $prod['Dimension']; ?>" required name="prod-dime" pattern="[. |a-zA-Z0-9]{1,60}">
                 </div>
               </div>
               <div class="col-xs-12 col-sm-6 col-md-4">

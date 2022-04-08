@@ -1,5 +1,5 @@
 <p class="lead">
-    En este panel podras actualizar la informacion de tu cuenta.
+    En este panel podras actualizar la información de tu cuenta.
 </p>
 <div class="container">
 	<div class="row">

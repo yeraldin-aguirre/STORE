@@ -44,7 +44,7 @@ include './library/consulSQL.php';
                 <div class="form-group">
                   <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
-                    <input type="text" id="addon1" class="form-control" name="term" required="" title="Escriba nombre del producto">
+                    <input type="text" id="addon1" pattern="[a-zA-Z0-9]{1,40}" class="form-control" name="term" required="" title="Escriba nombre del producto">
                     <span class="input-group-btn">
                       <button class="btn btn-info btn-raised" type="submit">Buscar</button>
                     </span>
@@ -64,7 +64,7 @@ include './library/consulSQL.php';
             mysqli_set_charset($mysqli, "utf8");
             
             $pagina = isset($_GET['pag']) ? (int)$_GET['pag'] : 1;
-            $regpagina = 20;
+            $regpagina = 12;
             $inicio = ($pagina > 1) ? (($pagina * $regpagina) - $regpagina) : 0;
             $query = '';
             $comprobacion = (isset($categoria) && $categoria != "");
@@ -98,8 +98,8 @@ include './library/consulSQL.php';
                                                                         } ?>
                            ">
                     <div class="caption">
-                      <h3><?php echo $prod['Material']; ?></h3>
-                      <p><?php echo $prod['NombreProd']; ?></p>
+                      <h3><?php echo $prod['NombreProd']; ?></h3>
+                      <p><?php echo $prod['Material']; ?></p>
                       <?php if ($prod['Descuento'] > 0) : ?>
                         <p>
                           <?php

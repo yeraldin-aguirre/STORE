@@ -22,13 +22,13 @@
                             <div class="col-xs-12">
                                 <div class="form-group label-floating">
                                     <label class="control-label">NIT/CEDULA</label>
-                                    <input class="form-control" type="text" name="prove-nit" pattern="[0-9]{1,20}" maxlength="20" required="">
+                                    <input class="form-control" type="text" name="prove-nit" pattern="[-|0-9]{1,15}" required="">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-md-6">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Nombre</label>
-                                    <input class="form-control" type="text" name="prove-name" maxlength="30" required="">
+                                    <input class="form-control" type="text" name="prove-name" required="" pattern="[ |a-zA-z]{1,30}">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-md-6">
@@ -40,7 +40,7 @@
                             <div class="col-xs-12 col-md-6">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Teléfono</label>
-                                    <input class="form-control" type="tel" name="prove-tel" pattern="[0-9]{1,20}" maxlength="20" required="">
+                                    <input class="form-control" type="tel" name="prove-tel" pattern="[0-9]{7,15}" required="">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-md-6">

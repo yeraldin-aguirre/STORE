@@ -25,7 +25,7 @@ include './library/consulSQL.php';
               <div class="form-group">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
-                  <input type="text" id="addon1" class="form-control" name="term" required="" title="Escriba nombre del producto">
+                  <input type="text" pattern="[a-zA-Z0-9]{1,40}" id="addon1" class="form-control" name="term" required="" title="Escriba nombre del producto">
                   <span class="input-group-btn">
                     <button class="btn btn-info btn-raised" type="submit">Buscar</button>
                   </span>
@@ -46,7 +46,7 @@ include './library/consulSQL.php';
             mysqli_set_charset($mysqli, "utf8");
 
             $pagina = isset($_GET['pag']) ? (int)$_GET['pag'] : 1;
-            $regpagina = 20;
+            $regpagina = 12;
             $inicio = ($pagina > 1) ? (($pagina * $regpagina) - $regpagina) : 0;
 
             $consultar_productos = mysqli_query($mysqli, "SELECT SQL_CALC_FOUND_ROWS * FROM producto WHERE NombreProd LIKE '%" . $search . "%' OR Dimension LIKE '%" . $search . "%' OR Material LIKE '%" . $search . "%' LIMIT $inicio, $regpagina");
@@ -69,8 +69,8 @@ include './library/consulSQL.php';
                                                     } ?>
                              ">
                     <div class="caption">
-                      <h3><?php echo $prod['Material']; ?></h3>
-                      <p><?php echo $prod['NombreProd']; ?></p>
+                      <h3><?php echo $prod['NombreProd']; ?></h3>
+                      <p><?php echo $prod['Material']; ?></p>
                       <p>$<?php echo $prod['Precio']; ?></p>
                       <p class="text-center">
                         <a href="infoProd.php?CodigoProd=<?php echo $prod['CodigoProd']; ?>" class="btn btn-primary btn-raised btn-sm btn-block"><i class="fa fa-plus"></i>&nbsp; Detalles</a>
