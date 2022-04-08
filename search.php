@@ -46,7 +46,7 @@ include './library/consulSQL.php';
             mysqli_set_charset($mysqli, "utf8");
 
             $pagina = isset($_GET['pag']) ? (int)$_GET['pag'] : 1;
-            $regpagina = 20;
+            $regpagina = 12;
             $inicio = ($pagina > 1) ? (($pagina * $regpagina) - $regpagina) : 0;
 
             $consultar_productos = mysqli_query($mysqli, "SELECT SQL_CALC_FOUND_ROWS * FROM producto WHERE NombreProd LIKE '%" . $search . "%' OR Dimension LIKE '%" . $search . "%' OR Material LIKE '%" . $search . "%' LIMIT $inicio, $regpagina");

@@ -41,7 +41,7 @@
                   <div class="col-xs-12 col-sm-6">
                     <div class="form-group label-floating">
                       <label class="control-label"><i class="fa fa-user"></i>&nbsp; Ingrese sus nombres</label>
-                      <input class="form-control" type="text" required name="clien-name" title="Ingrese sus nombres (solamente letras)" pattern="[a-zA-Z]{1,50}" maxlength="50">
+                      <input class="form-control" type="text" required name="clien-name" title="Ingrese sus nombres (solamente letras)" pattern="[ |a-zA-Z]{1,50}" maxlength="50">
                     </div>
                   </div>
                   <div class="col-xs-12 col-sm-6">
